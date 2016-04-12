@@ -1,13 +1,15 @@
-<div class="container">
-
-  <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
-  </div>
-
-  <div >
-    <h1>The Kicker2Pi</h1>
-    <p class="lead">
-      <img src="images/logo.png" ><br>
-    </p>
-  </div>
-</div>
+<header id="page-header">
+    <div class="collapse-nav">
+        <button ng-click="toggleNav()"><i class="fa fa-lg fa-bars"></i></button>
+    </div>
+    <div id="nav" ng-class="{'collapsed': navCollapsed}">
+        <div class="nav-item">New Match</div>
+        <div class="nav-item">Restart Match</div>
+        <div class="nav-item">Change Sides</div>
+        <div class="nav-item">Past Games</div>
+    </div>
+</header>
+<content id="main">
+    Watson : Holmes<br>
+    6 : 7
+</content>

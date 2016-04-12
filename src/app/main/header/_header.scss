@@ -1,0 +1,59 @@
+#page-header{
+    width: 100%;
+    height: $header-height;
+    background: $header-background;
+    
+    .collapse-nav{
+        width: $header-height;
+        height: $header-height;
+        display: inline-block;
+        float: left;
+        
+        > button{
+            width: $header-height;
+            height: $header-height;
+            background: $header-background;
+            border: none;
+            color: white;
+            text-shadow: none;
+            transition: text-shadow 0.5s;
+            
+            &:hover, &:active{
+                text-shadow: 0 0 5px white;
+            }
+        }
+    }
+    
+    #nav{
+        width: calc( 100% - #{$header-height} );
+        overflow: hidden;
+        transition: width 0.5s;
+        display: flex;
+        flex-direction: row;
+        
+        &.collapsed{
+            width: 0;
+        }
+        
+        .nav-item{
+            height: $header-height - 4px;
+            display: inline-block;
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+            line-height: $header-height - 4px;
+            border-top: 4px solid transparent;
+            transition: all 0.5s;
+            color: white;
+            
+            &:hover{
+                color: $main-color;
+                border-top: 4px solid $main-color;
+            }
+            
+            &:active{
+                border-top: 4px solid $main-color;
+            }
+        }
+    }
+}
